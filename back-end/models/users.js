@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
-const { v6: uuid } = require('uuid');
+const { v6: uuid } = require('uuid');  // CommonJS syntax
 
-const UserShema = new mongoose.Schema({
-    name: { type: String, require: true, unique: true },
-    email: { type: String, require: true, unique: true },
-    password: { type: String, require: true },
+const UserSchema = new mongoose.Schema({
+    name: { type: String, required: true, unique: true },
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
     uuid: { type: String, default: () => uuid() }
 });
 
-module.exports = mongoose.Schema('users', UserShema);
+module.exports = mongoose.model('users', UserSchema);  // CommonJS export
