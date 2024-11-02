@@ -4,7 +4,7 @@ const users = require('../../models/users');
 const bcrypt = require('bcrypt');
 
 router.post('/', async (req, res) => {
-    const { name, email, password } = req.body; 
+    const { name, email, password } = req.body;     
     console.log("Request body received:", req.body);
 
     try {
