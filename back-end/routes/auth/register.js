@@ -29,7 +29,7 @@ router.post('/', async (req, res) => {
 
         await newUser.save();
         console.log("New user saved:", newUser);
-
+  
         res.status(201).json({
             message: "User saved successfully",
             user: newUser
