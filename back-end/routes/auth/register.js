@@ -29,7 +29,6 @@ router.post('/', async (req, res) => {
 
         await newUser.save();
         console.log("New user saved successfully:", newUser);
-
         res.status(201).json({
             message: "User saved to server successfully",
             user: newUser
