@@ -26,7 +26,6 @@ router.post('/', async (req, res) => {
             email,
             password: hashPassword
         });
-
         await newUser.save();
         console.log("New user saved successfully:", newUser);
         res.status(201).json({
